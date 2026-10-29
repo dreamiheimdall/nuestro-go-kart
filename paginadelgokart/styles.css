@@ -1,0 +1,173 @@
+
+/* Colores principales */
+:root {
+    --rojo: #e52325;
+    --amarillo: #ffd629;
+    --negro: #222222;
+    --blanco: #ffffff;
+}
+
+/* Estructura general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: black;
+
+    background-image: url("Plantilla color cambiable.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+/* Encabezado */
+header {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--amarillo);
+}
+
+/* Secciones */
+section {
+    max-width: 900px;
+    width: 90%;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--blanco);
+    border: 2px solid var(--rojo);
+    border-radius: 10px;
+}
+
+h2 {
+    color: var(--rojo);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Portada con fondo */
+.portada {
+    text-align: center;
+    background-image: linear-gradient(
+        135deg,
+        #ffffff,
+        #fff0b3
+    );
+    background-size: cover;
+    background-position: center;
+}
+
+/* Espacio para la fotografía */
+.foto {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    border: 2px dashed var(--rojo);
+    border-radius: 8px;
+    background-color: #eeeeee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #555555;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Lista de características */
+li {
+    margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+    padding: 15px;
+    background-color: var(--negro);
+    color: var(--amarillo);
+    text-align: center;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .foto {
+        height: 220px;
+    }
+}
+
+
+/* FOTO DE LA PORTADA */
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.foto img {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.foto img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 600px) {
+    .foto img {
+        max-width: 100%;
+        height: 250px;
+    }
+}
